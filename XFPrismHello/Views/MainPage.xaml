@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFPrismHello.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="{Binding BgColor}">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Button Text="Go to SecondPage" 
+                BorderRadius="15"
+                Padding="15"
+                BackgroundColor="Teal"
+                TextColor="White"
+                FontSize="Large"
+                Command="{Binding NavigateToSecondPage}" />
+        <Button Text="Show Dialog" 
+                BorderRadius="15"
+                Padding="15"
+                BackgroundColor="Teal"
+                TextColor="White"
+                FontSize="Large"
+                Command="{Binding ShowDialog}" />
+        <Button Text="Show Alert" 
+                BorderRadius="15"
+                Padding="15"
+                BackgroundColor="Teal"
+                TextColor="White"
+                FontSize="Large"
+                Command="{Binding ShowAlert}" />
+        <Button Text="Red Bg" 
+                BorderRadius="15"
+                Padding="15"
+                BackgroundColor="Teal"
+                TextColor="White"
+                FontSize="Large"
+                Command="{Binding ChangeColor}" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      x:Class="XFPrismHello.Views.DialogView"
+      xmlns:prism="http://prismlibrary.com"
+      prism:ViewModelLocator.AutowireViewModel="True"
+      prism:DialogLayout.RelativeWidthRequest="{OnIdiom Default=0.75, Desktop=0.5}"
+      HasShadow="false"
+      BackgroundColor="White">
+    <StackLayout>
+        <Label Text="Welcome to Dialog!" />
+        <Button Text="Close"
+                Command="{Binding CloseCommand}"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="BlueViolet"/>
+    </StackLayout>
+</Frame>
