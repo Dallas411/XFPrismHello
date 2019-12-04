@@ -1,3 +1,3 @@
 
 
-## Some simple examples how PRIM can help implement pattern MVVM in Xamarin.Forms
+## Some simple examples how PRISM can help implement pattern MVVM in Xamarin.Forms
