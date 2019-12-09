@@ -32,6 +32,7 @@ namespace XFPrismHello
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();
             containerRegistry.RegisterDialog<DialogView, DialogViewModel>();
+            containerRegistry.Register<IFooService, FooService>();
         }
     }
 }

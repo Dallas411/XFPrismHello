@@ -5,7 +5,10 @@
              Title="{Binding Title}">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="{Binding BgColor}">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Label 
+            Padding="15"
+            BackgroundColor="Teal"
+            Text="{Binding Hello}" />
         <Button Text="Go to SecondPage" 
                 BorderRadius="15"
                 Padding="15"

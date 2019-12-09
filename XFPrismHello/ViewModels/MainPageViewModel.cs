@@ -14,6 +14,7 @@ namespace XFPrismHello.ViewModels
     public class MainPageViewModel : ViewModelBase
     {
         IPageDialogService _pageDialog;
+        IFooService _fooService;
         public DelegateCommand CloseCommand { get; }
 
         //public DelegateCommand NavigateToSecondPage => new DelegateCommand(async () => await NavigationService.NavigateAsync("SecondPage", useModalNavigation: true));
@@ -32,12 +33,23 @@ namespace XFPrismHello.ViewModels
             set { SetProperty(ref bgColor, value); }
         }
 
-        public MainPageViewModel(INavigationService navigationService, IDialogService dialogService, IPageDialogService pageDialogService)
+        private string hello;
+
+        public string Hello
+        {
+            get { return hello; }
+            set { SetProperty(ref hello, value); }
+        }
+
+
+        public MainPageViewModel(INavigationService navigationService, IDialogService dialogService, IPageDialogService pageDialogService, IFooService fooService)
             : base(navigationService)
         {
             _pageDialog = pageDialogService;
+            _fooService = fooService;
             Title = "Main Page";
             BgColor = Color.Cornsilk;
+            Hello = _fooService.SayHello();
             ShowDialog = new DelegateCommand(async () =>
             {
                 dialogService.ShowDialog("DialogView", CloseDialogCallback);
@@ -54,8 +66,6 @@ namespace XFPrismHello.ViewModels
 
         void CloseDialogCallback(IDialogResult dialogResult)
         {
-
-
 
         }
 
